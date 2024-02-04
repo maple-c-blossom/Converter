@@ -22,6 +22,5 @@ int main(int32_t argc,char* argv[])
 		printf("\n");
 	}
 	CoUninitialize();
-	system("pause");
 	return 0;
 }
