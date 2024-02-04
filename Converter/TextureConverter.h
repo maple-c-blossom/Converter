@@ -4,7 +4,8 @@
 class TextureConverter
 {
 public:
-	void ConvertTextureWICToDDS(const std::string& filePath);
+	void ConvertTextureWICToDDS(const std::string& filePath, int numOptions = 0, char* options[] = nullptr);
+	static void OutputUsage();
 private:
 	DirectX::TexMetadata metadata_;
 	DirectX::ScratchImage scratchImage_;
@@ -15,6 +16,6 @@ private:
 	void LoadWICTextureFromFile(const std::string& filePath);
 	static std::wstring ConvertMultiByteStringToWideString(const std::string& mString);
 	void SeparateFilePath(const std::wstring& filePath);
-	void SaveDDSTextureToFile();
+	void SaveDDSTextureToFile(int numOptions, char* options[]);
 };
 
